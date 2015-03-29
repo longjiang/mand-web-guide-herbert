@@ -2,12 +2,12 @@
 
 /**
  * @wordpress-plugin
- * Plugin Name:       Plugin Name
- * Plugin URI:        http://plugin-name.com/
- * Description:       A plugin.
+ * Plugin Name:       Mand Web Guide
+ * Plugin URI:        http://mand.jon-long.ca
+ * Description:       Creates a yahoo-link web directory with screenshots.
  * Version:           1.0.0
  * Author:            Author
- * Author URI:        http://author.com/
+ * Author URI:        http://www.jon-long.ca
  * License:           MIT
  */
 
