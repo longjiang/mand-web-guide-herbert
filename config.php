@@ -9,7 +9,7 @@ return [
     'views'     => 'views',
     'assets'    => 'assets',
     'core'      => 'plugin.php',
-    'api'       => 'myPluginApi',
-    'name'      => 'My Plugin',
+    'api'       => 'mandWebGuideApi',
+    'name'      => 'Mand Web Guide',
     'eloquent'  => true
 ];
