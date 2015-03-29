@@ -44,4 +44,30 @@ function get_post_thumbnail_url($post_id) {
 	return wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ))[0];
 }
 
+function get_top_categories( $taxonomy ) {
+	return get_categories(array(
+		'taxonomy' => 'website_category',
+		'parent'   => '0',
+	));
+}
+
+function get_subcategories( $category, $taxonomy = 'category' ) {
+	$result = get_categories(array(
+			'taxonomy' => $taxonomy,
+			'parent' =>   $category->term_id,
+		));
+	if ( is_array($result) ) {
+		$subcategories = $result;
+		return $result;
+	} elseif (is_object($result) ) {
+		if ($result->term_id == $category->term_id) {
+			return false;
+		} else {
+			return [ $result ];
+		}
+	} else {
+		return false;
+	}
+}
+
 use \jl;
