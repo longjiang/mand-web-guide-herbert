@@ -1,13 +1,21 @@
-<h3>{{ category_title }}</h3>
-{% for website in websites %}
-	<!-- The thumbnail of the web site -->
-	{% if website.thumbnail %}
-	<a href="{{ website.url }}"><img src="{{ website.thumbnail }}"></a>
-	{% else %}
-	<p>No thumbnail :(</p>
-	{% endif %}
-	<!-- The title of the website, linked to its url -->
-	<h4><a href="{{ website.url }}">{{ website.title }}</a></h4>
-	<p>{{ website.description }}</p>
-	<p><a href="{{ website.post_url }}">Comment</a></p>
-{% endfor %}
+<div class="mandwg-category-teaser">
+	<h3>{{ category_title }}</h3>
+	<div class="mandwg-teaser-group">
+	{% for website in websites %}
+		<div class="mandwg-teaser">
+			<!-- The thumbnail of the web site -->
+			{% if website.thumbnail %}
+			<a href="{{ website.url }}" class="mandwg-teaser-thumb-wrapper">
+				<img src="{{ website.thumbnail }}" class="mandwg-teaser-thumb">
+			</a>
+			{% else %}
+			<p class="mandwg-teaser-no-thumb">No thumbnail :(</p>
+			{% endif %}
+			<!-- The title of the website, linked to its url -->
+			<h4 class="mandwg-teaser-title"><a href="{{ website.url }}" class="mandwg-title">{{ website.title }}</a></h4>
+			<p class="mandwg-teaser-description">{{ website.description }}</p>
+			<p><a href="{{ website.post_url }}" class="mandwg-post-link">Comment</a></p>
+		</div>
+	{% endfor %}
+	</div>
+</div>

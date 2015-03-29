@@ -8,10 +8,16 @@ class WebGuideController extends BaseController {
 	/**
 	* Show the index of the web guide.
 	*/
-	public function index()
-	{
-		// I will first get all the categories
+	public function index() {
+		
+		function add_body_class($classes) {
+			$classes[] = 'mand-web-guide-index';
+			return $classes;
+		}
+		// Add a class to the body
+		add_filter( 'body_class', 'add_body_class' );
 
+		// I will first get all the categories
 		$website_categories = jl\get_top_categories( 'website_category' );
 
 		return $this->show_websites_in_categories($website_categories);
