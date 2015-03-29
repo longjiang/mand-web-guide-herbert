@@ -24,6 +24,7 @@ class WebGuideController extends BaseController {
 			$website->title = $website_post->post_title;
 			$website->description = $website_post->post_excerpt;
 			$website->url = get_post_meta( $website_post->ID, 'url', true );
+			$website->post_url = get_permalink($website_post->ID);
 			$website->thumbnail = jl\get_post_thumbnail_url( $website_post->ID );
 			return $website;
 		});

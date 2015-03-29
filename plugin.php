@@ -36,7 +36,7 @@ function add_website_post_type($post_types) {
     'labels' => piklist('post_type_labels', 'Websites')
     ,'public' => true
     ,'rewrite' => array(
-      'slug' => 'demo'
+      'slug' => 'website'
     )
     ,'edit_columns' => array(
 	   'title' => __('Site title')
