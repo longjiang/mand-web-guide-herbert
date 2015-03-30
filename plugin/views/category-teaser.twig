@@ -5,16 +5,18 @@
 		<div class="mandwg-teaser">
 			<!-- The thumbnail of the web site -->
 			{% if website.thumbnail %}
-			<a href="{{ website.url }}" class="mandwg-teaser-thumb-wrapper">
+			<!-- <a href="{{ website.post_url }}" class="mandwg-teaser-thumb-wrapper"> -->
 				<img src="{{ website.thumbnail }}" class="mandwg-teaser-thumb">
-			</a>
+			<!-- </a> -->
 			{% else %}
 			<p class="mandwg-teaser-no-thumb">No thumbnail :(</p>
 			{% endif %}
 			<!-- The title of the website, linked to its url -->
-			<h4 class="mandwg-teaser-title"><a href="{{ website.url }}" class="mandwg-title">{{ website.title }}</a></h4>
+			<h4 class="mandwg-teaser-title">{{ website.title }}</h4>
 			<p class="mandwg-teaser-description">{{ website.description }}</p>
 			<p><a href="{{ website.post_url }}" class="mandwg-post-link">Comment</a></p>
+			<a class="btn btn-default block mandwg-teaser-button-char" href="{{ website.url }}"  target="_blank">Open Directly</a>
+			<a href="http://mand.jon-long.ca/web/go?url={{ website.url }}" class="btn btn-primary block mandwg-teaser-button-mand" target="_blank">Convert to Mand</a>
 		</div>
 	{% endfor %}
 	</div>
