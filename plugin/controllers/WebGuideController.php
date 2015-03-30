@@ -55,13 +55,20 @@ class WebGuideController extends BaseController {
 		
 		$html_to_return = '';
 
+
 		foreach ($website_categories as $website_category) {
+
+			$category_parents_string = get_category_parents($website_category, false, ' > ');
+
+			$category_parents_string = preg_replace('/(.*)>/u', '$1', $category_parents_string);
+
 			$websites_in_category = self::get_websites_by_category($website_category);
 
 			$html_to_return .= $this->view->render( 'category-teaser', [
 				'category_title' => $website_category->name,
 				'category_id' => $website_category->term_id,
 				'websites' => $websites_in_category,
+				'category_parents_string' => $category_parents_string,
 				] );
 
 			// If there are sub categories I will loop over any subcategories

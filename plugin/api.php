@@ -6,7 +6,7 @@ class Api extends BaseController {
 	*/
 	public function index()
 	{
-		echo $this->controller->fetch('WebGuideController@index');
+		return $this->controller->fetch('WebGuideController@index');
 	}
 }
 
