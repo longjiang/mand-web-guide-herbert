@@ -40,8 +40,8 @@ function get_posts_from_category($term_id, $post_type = 'post', $taxonomy = 'cat
 	return get_posts( $args );
 }
 
-function get_post_thumbnail_url($post_id) {
-	return wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ))[0];
+function get_post_thumbnail_url($post_id, $size = 'medium') {
+	return wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size )[0];
 }
 
 function get_top_categories( $taxonomy ) {
