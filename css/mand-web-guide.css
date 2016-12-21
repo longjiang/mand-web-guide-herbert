@@ -1,0 +1,64 @@
+
+/* ------------------------------------------------------------------------- *
+ * Web Guide
+/* ------------------------------------------------------------------------- */
+
+.page-id-35 .post-thumbnail {
+	display: none;
+}
+
+.mandwg-teaser-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mandwg-teaser {
+    background: #fafafa;
+    margin: 30px 15px 0 15px;
+    width: 100%;
+    /* margin-top: 30px; */
+    padding: 20px;
+    box-shadow: 1px 1px 5px #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 960px) {
+  .mandwg-teaser {
+      width: calc(33.33333% - 30px);
+  }
+}
+
+
+@media (min-width: 1200px) {
+}
+
+.mandwg-teaser-thumb {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.mandwg-teaser h4 {
+    margin-top: 17px;
+}
+
+.mandwg-post-link {
+    font-size: 1rem;
+    font-family: Raleway;
+    font-weight: bold;
+}
+
+.mandwg-category-teaser {
+    margin-top: 80px;
+}
+
+.mandwg-category-teaser h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.mandwg-teaser-button-mand {
+  margin-top: 10px;
+}

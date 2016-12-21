@@ -74,11 +74,12 @@ add_filter('piklist_taxonomies', 'add_website_category_taxonomy');
 				,'labels' => piklist('taxonomy_labels', 'Website Category')
 				,'show_ui' => true
 				,'query_var' => true
-				,'rewrite' => array( 
-					'slug' => 'website-category' 
+				,'rewrite' => array(
+					'slug' => 'website-category'
 				)
 				,'show_admin_column' => true
 			)
 		);
 return $taxonomies;
 }
+wp_enqueue_style( 'mand-web-guide', plugins_url( 'css/mand-web-guide.css' , __FILE__ ) );
