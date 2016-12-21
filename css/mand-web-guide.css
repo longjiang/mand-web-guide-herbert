@@ -16,12 +16,12 @@
     background: #fafafa;
     margin: 30px 15px 0 15px;
     width: 100%;
-    /* margin-top: 30px; */
     padding: 20px;
     box-shadow: 1px 1px 5px #ccc;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 @media (min-width: 960px) {
